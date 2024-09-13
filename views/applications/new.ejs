@@ -4,29 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add a New App</title>
+  <title>Document</title>
 </head>
 
 <body>
-  <%- include("../partials/_navbar.ejs") %>
+  <%- include('../partials/_navbar.ejs') %>
 
-  <h1>Add a New App</h1>
-
-  <form action="" method="">
+  <h1>Add a New Application</h1>
+  <form action="/users/<%= user._id %>/applications" method="POST">
     <label for="company">Company:</label>
-    <input type="text" id="company" name="company" />
+    <input type="text" name="company" id="company">
 
     <label for="title">Title:</label>
-    <input type="text" id="title" name="title" />
+    <input type="text" name="title" id="title">
 
     <label for="notes">Notes:</label>
     <textarea name="notes" id="notes"></textarea>
 
     <label for="postingLink">Posting Link:</label>
-    <input type="text" id="postingLink" name="postingLink" />
+    <input type="text" name="postingLink" id="postingLink">
 
     <label for="status">Status:</label>
-    <select name="status" id="status">
+    <select id="status" name="status">
       <option value="interested">Interested</option>
       <option value="applied">Applied</option>
       <option value="interviewing">Interviewing</option>
@@ -34,6 +33,7 @@
       <option value="accepted">Accepted</option>
     </select>
 
+    <!-- Add a submit button -->
     <button type="submit">Add Application</button>
   </form>
 </body>
